@@ -36,7 +36,7 @@ const entry = {
         />
     ),
     extensionId: 'websockExt',
-    extensionURL: 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs',
+    extensionURL: null, // built-in (stretch3) install: built-in extensionなので extensionURL を指定してはならない.
     collaborator: 'Programming Education Lab',
     iconURL: pcratchIoTIconURL,
     insetIconURL: pcratchIoTInsetIconURL,
