@@ -16,6 +16,11 @@ let formatMessage = messageData => messageData.defaultMessage;
  * Setup format-message for this extension.
  */
 const setupTranslations = () => {
+    if (typeof formatMessage.setup !== 'function') {
+        // formatMessage was not replaced by runtime.formatMessage (e.g. built-in install
+        // on stretch3), so there is no locale table to extend.
+        return;
+    }
     const localeSetup = formatMessage.setup();
     if (localeSetup && localeSetup.translations[localeSetup.locale]) {
         Object.assign(
