@@ -1134,8 +1134,12 @@ var setupTranslations = function setupTranslations() {
     return;
   }
   var localeSetup = formatMessage.setup();
-  if (localeSetup && localeSetup.translations[localeSetup.locale]) {
-    Object.assign(localeSetup.translations[localeSetup.locale], translations[localeSetup.locale]);
+  if (localeSetup && localeSetup.translations) {
+    Object.keys(translations).forEach(function (locale) {
+      if (localeSetup.translations[locale]) {
+        Object.assign(localeSetup.translations[locale], translations[locale]);
+      }
+    });
   }
 };
 var EXTENSION_ID = 'websockExt';
@@ -1166,6 +1170,9 @@ var ExtensionBlocks = /*#__PURE__*/function () {
     if (runtime.formatMessage) {
       // Replace 'formatMessage' to a formatter which is used in the runtime.
       formatMessage = runtime.formatMessage;
+    } else if (ExtensionBlocks.formatMessage) {
+      // Built-in extensions receive the formatter through the class by the installer.
+      formatMessage = ExtensionBlocks.formatMessage;
     }
     try {
       // ソケット作成とソケットの監視

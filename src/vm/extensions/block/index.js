@@ -22,11 +22,12 @@ const setupTranslations = () => {
         return;
     }
     const localeSetup = formatMessage.setup();
-    if (localeSetup && localeSetup.translations[localeSetup.locale]) {
-        Object.assign(
-            localeSetup.translations[localeSetup.locale],
-            translations[localeSetup.locale]
-        );
+    if (localeSetup && localeSetup.translations) {
+        Object.keys(translations).forEach(locale => {
+            if (localeSetup.translations[locale]) {
+                Object.assign(localeSetup.translations[locale], translations[locale]);
+            }
+        });
     }
 };
 
@@ -93,6 +94,9 @@ class ExtensionBlocks {
         if (runtime.formatMessage) {
             // Replace 'formatMessage' to a formatter which is used in the runtime.
             formatMessage = runtime.formatMessage;
+        } else if (ExtensionBlocks.formatMessage) {
+            // Built-in extensions receive the formatter through the class by the installer.
+            formatMessage = ExtensionBlocks.formatMessage;
         }
 
         try {
