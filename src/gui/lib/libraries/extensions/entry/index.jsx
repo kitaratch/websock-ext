@@ -18,7 +18,7 @@ const entry = {
     get name () {
         return formatMessage({
             id: 'websockExt.entry.name',
-            default: "Websock 拡張",
+            default: "ネットワーク拡張(v0.2.3)",
             description: 'name of the extension'
         });
     },

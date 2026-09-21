@@ -1,6 +1,6 @@
 {
   "name": "websock-ext",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "scripts": {
     "register": "npx xcratch-register --id=websockExt --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry --core --link --use=extension-support util",
     "build": "npx xcratch-build --module=websockExt --gui=../scratch-gui --block=./src/vm/extensions/block --entry=./src/gui/lib/libraries/extensions/entry"

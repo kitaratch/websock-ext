@@ -1,14 +1,14 @@
 {
   "en": {
-    "websockExt.entry.name": "Network Extension(v0.2.2)",
+    "websockExt.entry.name": "Network Extension(v0.2.3)",
     "websockExt.entry.description": "Network communication"
   },
   "ja": {
-    "websockExt.entry.name": "ネットワーク拡張(v0.2.2)",
+    "websockExt.entry.name": "ネットワーク拡張(v0.2.3)",
     "websockExt.entry.description": "ネットワーク通信をします"
   },
   "ja-Hira": {
-    "websockExt.entry.name": "ネットワークかくちょう(v0.2.2)",
+    "websockExt.entry.name": "ネットワークかくちょう(v0.2.3)",
     "websockExt.entry.description": "ネットワークつうしんをします"
   }
 }

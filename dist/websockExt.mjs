@@ -3,18 +3,18 @@ var img$2 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAFzCAYAAADi5Xe0A
 var img$1 = "data:image/svg+xml,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='152.06552' height='163.58806' viewBox='0%2c0%2c152.06552%2c163.58806'%3e%3cg transform='translate(-163.96724%2c-98.20597)'%3e%3cg data-paper-data='%7b%26quot%3bisPaintingLayer%26quot%3b:true%7d' fill-rule='nonzero' stroke='black' stroke-width='0.5' stroke-linecap='butt' stroke-linejoin='miter' stroke-miterlimit='10' stroke-dasharray='' stroke-dashoffset='0' style='mix-blend-mode: normal'%3e%3cpath d='M164.21724%2c261.54403v-163.08806h151.56552v163.08806z' fill='%23f7f7f7'/%3e%3cpath d='M189.82568%2c217.21608v-72.53493h102.84804v72.53493z' fill='white'/%3e%3cpath d='M213.6822%2c195.73702v-28.42734h12.18314v28.42734z' fill='%23b1b1b1'/%3e%3cpath d='M253.49118%2c196.09582v-28.42733h12.18314v28.42734z' fill='%23b1b1b1'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e";
 
 var en$1 = {
-	"websockExt.entry.name": "Network Extension(v0.2.2)",
+	"websockExt.entry.name": "Network Extension(v0.2.3)",
 	"websockExt.entry.description": "Network communication"
 };
 var ja$1 = {
-	"websockExt.entry.name": "ネットワーク拡張(v0.2.2)",
+	"websockExt.entry.name": "ネットワーク拡張(v0.2.3)",
 	"websockExt.entry.description": "ネットワーク通信をします"
 };
 var translations$1 = {
 	en: en$1,
 	ja: ja$1,
 	"ja-Hira": {
-	"websockExt.entry.name": "ネットワークかくちょう(v0.2.2)",
+	"websockExt.entry.name": "ネットワークかくちょう(v0.2.3)",
 	"websockExt.entry.description": "ネットワークつうしんをします"
 }
 };
@@ -36,7 +36,7 @@ var entry = {
   get name() {
     return formatMessage$1({
       id: 'websockExt.entry.name',
-      default: "Websock 拡張",
+      default: "ネットワーク拡張(v0.2.3)",
       description: 'name of the extension'
     });
   },

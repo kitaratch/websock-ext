@@ -22,25 +22,11 @@ if [ ! -f ${EXTENSION_MANAGER_ORIG} ]; then
 fi
 sed -e "s|class ExtensionManager {|builtinExtensions['${EXTENSION_ID}'] = () => {${LF}    const formatMessage = require('format-message');${LF}    const ext = require('../extensions/${EXTENSION_ID}/${EXTENSION_ID}.mjs');${LF}    const blockClass = ext.blockClass;${LF}    blockClass.formatMessage = formatMessage;${LF}    return blockClass;${LF}};${LF}${LF}class ExtensionManager {|g" ${EXTENSION_MANAGER_ORIG} > node_modules/scratch-vm/src/extension-support/extension-manager.js
 
-
 ### copy entry files
 mkdir -p src/lib/libraries/extensions/${EXTENSION_ID}
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/index-stretch3.jsx src/lib/libraries/extensions/${EXTENSION_ID}/index.jsx
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/entry-icon.png src/lib/libraries/extensions/${EXTENSION_ID}/
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/inset-icon.svg src/lib/libraries/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-icon.svg src/lib/libraries/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-small-icon.svg src/lib/libraries/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/translations.json src/lib/libraries/extensions/${EXTENSION_ID}/
-
-### copy entry files2
-mkdir -p node_modules/scratch-vm/src/extensions/${EXTENSION_ID}
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/index-stretch3.jsx node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/index.jsx
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/entry-icon.png node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/inset-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/connection-small-icon.svg node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
-cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/translations.json node_modules/scratch-vm/src/extensions/${EXTENSION_ID}/
-
 
 ### insert it to the library
 # keep the pristine original on first run only, using a suffix unique to this extension so other extensions' installers don't collide

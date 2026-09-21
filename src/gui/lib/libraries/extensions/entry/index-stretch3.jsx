@@ -7,22 +7,20 @@ import {FormattedMessage} from 'react-intl';
 
 import pcratchIoTIconURL from './entry-icon.png';
 import pcratchIoTInsetIconURL from './inset-icon.svg';
-import pcratchIoTConnectionIconURL from './connection-icon.svg';
-import pcratchIoTConnectionSmallIconURL from './connection-small-icon.svg';
 
-const version = 'v0.2.1';
+const version = 'v0.2.3';
 const translations =
 {
     "en": {
-        "websockExt.entry.name": "Network Extension(v0.2.1)",
+        "websockExt.entry.name": "Network Extension(v0.2.3)",
         "websockExt.entry.description": "Network communication"
     },
     "ja": {
-        "websockExt.entry.name": "ネットワーク拡張(v0.2.1)",
+        "websockExt.entry.name": "ネットワーク拡張(v0.2.3)",
         "websockExt.entry.description": "ネットワーク通信をします"
     },
     "ja-Hira": {
-        "websockExt.entry.name": "ネットワークかくちょう(v0.2.1)",
+        "websockExt.entry.name": "ネットワークかくちょう(v0.2.3)",
         "websockExt.entry.description": "ネットワークつうしんをします"
     }
 };
@@ -30,7 +28,7 @@ const translations =
 const entry = {
     name: (
         <FormattedMessage
-            defaultMessage="Websock 拡張"
+            defaultMessage="Network Extension(v0.2.3)"
             description="name of the extension"
             id="websockExt.entry.name"
         />
@@ -51,17 +49,6 @@ const entry = {
     disabled: false,
     bluetoothRequired: false,
     internetConnectionRequired: false,
-    launchPeripheralConnectionFlow: false,
-    useAutoScan: false,
-    connectionIconURL: pcratchIoTConnectionIconURL,
-    connectionSmallIconURL: pcratchIoTConnectionSmallIconURL,
-    connectingMessage: (
-        <FormattedMessage
-            defaultMessage="Connecting"
-            description="Message to help people connect to the Websock extension."
-            id="websockExt.entry.Connecting"
-        />
-    ),
     helpLink: 'https://kitaratch.github.io/',
     translationMap: translations
 };
