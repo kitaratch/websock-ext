@@ -24,21 +24,21 @@ const entry = {
     },
     extensionId: 'websockExt',
     extensionURL: 'https://kitaratch.github.io/websock-ext/dist/websockExt.mjs',
-    collaborator: '',
+    collaborator: 'Programming Education Lab',
     iconURL: iconURL,
     insetIconURL: insetIconURL,
     get description () {
         return formatMessage({
             id: 'websockExt.entry.description',
-            defaultMessage: "WebSocket でネットワーク通信をします",
+            defaultMessage: "ネットワーク通信をします",
             description: 'Description for this extension',
         });
     },
     featured: true,
     disabled: false,
     bluetoothRequired: false,
-    internetConnectionRequired: false,
-    helpLink: 'https://pcratch.j-code.org/',
+    internetConnectionRequired: true,
+    helpLink: 'https://kitaratch.github.io/',
     setFormatMessage: formatter => {
         formatMessage = formatter;
     },

@@ -27,6 +27,7 @@ mkdir -p src/lib/libraries/extensions/${EXTENSION_ID}
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/index-stretch3.jsx src/lib/libraries/extensions/${EXTENSION_ID}/index.jsx
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/entry-icon.png src/lib/libraries/extensions/${EXTENSION_ID}/
 cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/inset-icon.svg src/lib/libraries/extensions/${EXTENSION_ID}/
+cp ${EXTENSION_REP}/src/gui/lib/libraries/extensions/entry/translations.json src/lib/libraries/extensions/${EXTENSION_ID}/
 
 ### insert it to the library
 # keep the pristine original on first run only, using a suffix unique to this extension so other extensions' installers don't collide
